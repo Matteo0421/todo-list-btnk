@@ -1,18 +1,24 @@
 <script>
-import {store} from '../data/store'
+import {store} from '../data/store';
+import todoListVue from './partials/todoList.vue';
   export default {
     data(){
       return{
         store
       }
-    }
+    },
+    components: {
+      todoListVue,
+    
   }
+}
+  
 </script>
 
 
 <template>
-  <div class="text-center my-5">
-    <butto @click="store.counter++" class="btn btn-primary ">Incrementa contatore</butto>
+  <div class=" my-5">
+    <todoListVue/>
   </div>
 </template>
 
